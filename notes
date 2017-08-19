@@ -1,0 +1,21 @@
+1. install putty on linux
+
+sudo apt-get install putty
+
+2. convert window putty reg file to linux flat file
+ 
+./pwin2lin.pl ./putty.reg ~/.putty
+
+3. update the putty backgroud colour scheme to something like ubuntu.
+ 
+sed -i 's/Colour2=0,0,0/Colour2=48,10,36/g' *
+
+4. change the font size in putty config to something bigger and better.
+ 
+sed -i 's/server:fixed/client:Ubuntu Mono 14/g' *
+
+5. update the location of the ppk key
+
+sed -i 's/C:\\\\My Documents\\\\SSH\\\\arlindo_private_ssh_key.ppk/\/home\/arlindo\/.ssh\/arlindo_private_ssh_key.ppk/g' *
+
+sed -i 's/H:\\\\SSH\\\\arlindo_private_ssh_key.ppk/\/home\/arlindo\/.ssh\/arlindo_private_ssh_key.ppk/g' *
